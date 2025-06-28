@@ -3,8 +3,10 @@ import pandas as pd
 from ta.trend import EMAIndicator
 from telegram import Bot
 
-bot_token = "8149950690:AAEj5_W4ph8q8_r6KBmI-cUtgMx9Xafs_MI"
-chat_id = "6706288349"
+import os
+
+bot_token = os.getenv("BOT_TOKEN")
+chat_id = os.getenv("CHAT_ID")
 
 def send_alert(message):
     bot = Bot(token=bot_token)
